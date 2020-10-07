@@ -1,0 +1,38 @@
+body{
+    font-size: 16px;
+}
+.border {
+    border: 1px solid red;
+}
+.link-menu {
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1.3em;
+    padding: 1%;
+    margin: 2%;
+    
+    
+    
+    
+}
+.link-menu:link,.link-menu:visited {
+    color: white;
+}
+.link-menu:hover{
+    color: #121D42;
+    background-color: white;
+}
+#cabecalho {
+    position: relative;
+    background-color:  #121D42;
+    
+}
+#menu {
+    text-align: center;
+    height: 75px;
+    padding: 2%;
+}
+.logo {
+   position: relative;
+}
