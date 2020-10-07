@@ -1,6 +1,50 @@
+/* Elementos */
 body{
-    font-size: 16px;
+    font-size: 18px;
 }
+
+/* IDS*/
+#cabecalho {
+    background-color:  #121D42;
+    margin: -1% -1% 0 -1%; 
+    
+}
+
+#rodape {
+    background-color:  #121D42;
+    margin: -1% -1% 0 -1%; 
+    font-weight: 900;
+}
+#menu {
+    text-align: center;
+    padding: 2.2%;
+}
+#logo {
+    position: absolute;
+    left: 10%;
+    top: 2.3%;
+}
+
+#semana-1{
+    margin: 0 -1%;
+    padding: 2%;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to right, #141575 0%, #11249f 31%, #772bb7 100%);
+}
+
+#semana-2{
+    margin: 0 -1%;
+    padding: 2%;
+    text-align: center;
+    color: #BEE200;
+    background: #212529;
+}
+#area-projeto{
+    
+}
+
+/* Classes*/
 .border {
     border: 1px solid red;
 }
@@ -8,31 +52,123 @@ body{
     text-decoration: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 500;
-    font-size: 1.3em;
-    padding: 1%;
-    margin: 2%;
-    
-    
-    
-    
+    font-size: 1em;
+    padding: 0.65%;
+    margin: 2%; 
+    position: relative;
 }
+
 .link-menu:link,.link-menu:visited {
     color: white;
 }
+
 .link-menu:hover{
     color: #121D42;
     background-color: white;
 }
-#cabecalho {
-    position: relative;
-    background-color:  #121D42;
-    
+
+.clear{
+    clear: both;
 }
-#menu {
+
+.projetos{
+    width: 30%;
+    margin: 0px auto;
+}
+
+.contador{  
+    border: 5px solid white;
+    color: white;
+    background-color: #772bb7;
+    margin-bottom: 1%;
+}
+
+.titulo-contador, .titulo-tarefas{
+    font-size: 3em;
+    margin: 0px;
+    font-weight: 900;
+    padding: 10px 0 0 0;
+}
+
+.text-contador{
+    font-size: 2.5em;
+    margin: 10px auto;
+    font-weight: 100;
+}
+
+.text2-contador{
+    font-size: 1.5em;
+    margin: 10px auto;
+    font-weight: 100;
+}
+
+.btn-contador{
+    width: 5em;
+    color: white;
+    background-color: #772bb7;
+    height: 5em;
+    margin: 1%;
+    font-size: 1em;
+    font-weight: 900;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.input-contador{
+    width: 10%;
+    margin: 0px auto 10px auto;
+    font-size: 1.5em;
     text-align: center;
-    height: 75px;
+}
+.input-contador::-webkit-outer-spin-button, .input-contador::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.icones{
+    font-size: 3.5em;
+}
+
+.titulo-semana{
+    font-size: 3.2em;
+    margin-top: 0;
     padding: 2%;
 }
-.logo {
-   position: relative;
+
+.lista-tarefas{
+    border: 5px solid #141575;
+    color: #141575;
+    background-color: white;
+    margin-top: 1%;
+}
+
+.list-lista{
+    list-style: none;
+    text-align: left;
+}
+
+.iten-lista{
+    text-align: left;
+    font-size: 1.3em;
+    margin: auto auto;
+    width: 70%;
+    padding: 5px;
+}
+
+.subIten-lista{
+    font-size: 0.9em;
+    padding: 1px;
+    margin: 2px;
+}
+
+.done-false{
+    text-decoration: none;
+}
+
+.done-true{
+    text-decoration: line-through;
+    color: #282852;
+}
+
+.lista-arquivar{
+    display: block;
 }

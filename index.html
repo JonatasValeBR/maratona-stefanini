@@ -1,20 +1,87 @@
 <!DOCTYPE html>
 
-<html>
+<html ng-app="app" lang="pt-br">
     <head>
+        <title>Maratona Stefanini</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+        <script src="js/app.js"></script>
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="css/app.css">
+        
     </head>
     <body>
-        <div id="cabecalho" class="border">
-           <div class="border">
-                <img class="logo border" src="img/logo-maratona.png">
+        <div id="cabecalho">
+           <div id="logo">
+                <img src="img/logo-maratona.png">
             </div>
-            <div id="menu" class="border">
-                <a class="link-menu border" href="#">Semana 1</a><a class="link-menu border" href="#">Semana 2</a><a class="link-menu border" href="#">Semana 3</a>
+            <div id="menu">
+                <a class="link-menu" href="#semana-1">Semana 1</a><a class="link-menu" href="#semana-2">Semana 2</a><a class="link-menu" href="#">Semana 3</a>
             </div>
+        </div>
+        <div id="semana-1" class="clear">
+            <h1 class="titulo-semana">Semana 1 - FrontEnd</h1>
+            <div class="tecnologias ">
+                <h2>Tecnologias Utilizadas na semana</h2>
+                <i class='icones bx bxl-angular' style="color: red;"></i>
+                <i class='icones bx bxl-html5' style="color: orange;"></i>
+                <i class='icones bx bxl-css3' style="color: #091FFB;"></i>
+                <i class='icones bx bxl-javascript' style="color: yellow;"></i>
+            </div>
+            <div>
+                <h2>Projetos Realizados</h2>
+                <div id="area-projeto">
+                    <div class="projetos">
+                            <div class="contador" ng-controller="contadorCtrl">
+                                <h3 class="titulo-contador ">Contador</h3>
+                                <h4 class="text-contador">{{contador}}</h4>
+                                <button class="btn-contador" ng-click="contando('add');">+{{valorOperado}}</button>
+                                <button class="btn-contador" ng-click="contando('sub');">-{{valorOperado}}</button>
+                                <hr>
+                                <h5 class="text2-contador">Altere o valor que sera subtraido ou acrescentado</h4>
+                                <input class="input-contador" type="number" min=0 ng-model="valorOperado">
+                            </div>
+                    </div>
+                    <div class="projetos">
+                        <div class="lista-tarefas" ng-controller=tarefasCtrl>
+                            <h3 class="titulo-tarefas">Lista de Tarefas</h3>
+                            <ul class="list-lista">
+                                <li class="iten-lista" ng-repeat="trf in tarefas">
+                                    <label>
+                                        <input type="checkbox" ng-model="trf.feito">
+                                        <span class="done-{{trf.feito}}">{{trf.nome}}</span>
+                                    </label>
+                                    <ul class="list-lista">
+                                        <li class="subIten-lista" ng-repeat="strf in trf.subTarefas">
+                                            <label>
+                                                <input type="checkbox" ng-model="strf.feito">
+                                                <span class="done-{{strf.feito}}">{{strf.nome}}</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="semana-2">
+            <h1 class="titulo-semana">Semana 2 - BackEnd</h1>
+            <img style="width: 100%;" src="img/semana2.png">
+            <div class="tecnologias ">
+                <!--<h2>Tecnologias Utilizadas na semana</h2>
+                <i class='icones bx bxl-angular' style="color: red;"></i>
+                <i class='icones bx bxl-html5' style="color: orange;"></i>
+                <i class='icones bx bxl-css3' style="color: #091FFB;"></i>
+                <i class='icones bx bxl-javascript' style="color: yellow;"></i>-->
+            </div>
+        </div>
+        <div id="rodape">
+             <div id="menu">
+                 <span style="font-size: 2.4em;">Desenvolvido por <a style="text-decoration: none; color: white;" href="https://github.com/JonatasValeBR">Jonatas Vale</a></span>
+             </div>
         </div>
         
     </body>
